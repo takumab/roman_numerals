@@ -4,13 +4,13 @@ public class RomanNumeral {
     public String convert(int number) {
         String convertedToRoman = "";
         if (number == 10) {
-            return "X";
+            convertedToRoman += "X";
+            number -= 10;
         }
-        if (number == 20) {
-            return "XX";
-        }
-        if (number == 30) {
-            return "XXX";
+
+        if (number >= 5) {
+            convertedToRoman += "V";
+            number -= 5;
         }
         for (int i = 0; i < number; i++) {
             convertedToRoman += "I";

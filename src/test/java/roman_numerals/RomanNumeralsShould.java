@@ -21,8 +21,7 @@ public class RomanNumeralsShould {
             "II,      2",
             "III,     3",
             "X,       10",
-            "XX,      20",
-            "XXX,     30"
+            "V,       5"
     })
     void convert_number_to_roman_numeral(String expected, int input) {
         RomanNumeral romanNumeral = new RomanNumeral();
