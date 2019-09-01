@@ -5,7 +5,7 @@ public class RomanNumeral {
     public String convert(int number) {
         String convertedToRoman = "";
         for (RomanToNumber romanToNumber : RomanToNumber.values()) {
-            if (number == romanToNumber.number) {
+            if (number >= romanToNumber.number) {
                 convertedToRoman += romanToNumber.roman;
                 number -= romanToNumber.number;
             }
