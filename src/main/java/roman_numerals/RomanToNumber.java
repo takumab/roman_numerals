@@ -2,7 +2,8 @@ package roman_numerals;
 
 public enum RomanToNumber {
     TEN("X", 10),
-    FIVE("V", 5);
+    FIVE("V", 5),
+    ONE("I", 1);
 
     public final String roman;
     public final int number;
