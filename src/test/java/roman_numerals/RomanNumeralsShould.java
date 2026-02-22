@@ -17,10 +17,12 @@ public class RomanNumeralsShould {
             "I,         1",
             "II,        2",
             "III,       3",
+            "IV,        4",
             "V,         5",
-            "VI,         6",
+            "VI,        6",
+            "IX,        9",
             "X,         10",
-            "XI,         11"
+            "XI,        11"
     })
     void convert_number_to_roman_numeral(String expected, int input) {
         RomanNumeral romanNumeral = new RomanNumeral();
