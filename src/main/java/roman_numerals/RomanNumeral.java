@@ -5,14 +5,11 @@ public class RomanNumeral {
     public String convert(int number) {
         String roman = "";
 
-        if (number >= 10) {
-            roman += "X";
-            number -= 10;
-        }
-
-        if (number >= 5) {
-            roman += "V";
-            number -= 5;
+        for (RomanToNumber romanToNumber : RomanToNumber.values()) {
+            if (number >= romanToNumber.number) {
+                roman += romanToNumber.roman;
+                number -= romanToNumber.number;
+            }
         }
 
         for (int i = 0; i < number; i++) {
