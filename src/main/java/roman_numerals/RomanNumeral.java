@@ -1,19 +1,21 @@
 package roman_numerals;
 
+import org.apache.commons.lang3.NotImplementedException;
+
 public class RomanNumeral {
 
     public String convert(int number) {
-        String convertedToRoman = "";
-        for (RomanToNumber romanToNumber : RomanToNumber.values()) {
-            if (number >= romanToNumber.number) {
-                convertedToRoman += romanToNumber.roman;
-                number -= romanToNumber.number;
-            }
+        String roman = "";
+        if (number >= 5) {
+            roman += "V";
+            number -= 5;
         }
+
         for (int i = 0; i < number; i++) {
-            convertedToRoman += "I";
+            roman += "I";
         }
-        return convertedToRoman;
+
+        return roman;
     }
 
 }
