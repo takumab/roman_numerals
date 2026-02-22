@@ -1,11 +1,15 @@
 package roman_numerals;
 
-import org.apache.commons.lang3.NotImplementedException;
-
 public class RomanNumeral {
 
     public String convert(int number) {
         String roman = "";
+
+        if (number >= 10) {
+            roman += "X";
+            number -= 10;
+        }
+
         if (number >= 5) {
             roman += "V";
             number -= 5;
